@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title or "Fattoad Press" }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/assets/styles.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Fattoad Press</a>
+    <nav class="nav">
+      <a href="/"     class="{{ '/'     == page.url ? 'active' : '' }}">Home</a>
+      <a href="/about/" class="{{ '/about/' == page.url ? 'active' : '' }}">About</a>
+      <a href="/journal/" class="{{ '/journal/' == page.url ? 'active' : '' }}">Journal</a>
+      <a href="/contact/" class="{{ '/contact/' == page.url ? 'active' : '' }}">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <p>© {{ new Date().getFullYear() }} Fattoad Press · quiet pieces made with care</p>
+  </footer>
+</body>
+</html>
