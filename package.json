@@ -1,0 +1,11 @@
+{
+  "name": "my-eleventy-site",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "scripts": {
+    "build": "eleventy"
+  }
+}
